@@ -1,5 +1,6 @@
 package fx;
 
+import fx.scenes.JavaFxPlayer;
 import tictactoe.Board;
 import tictactoe.GameTypes;
 import tictactoe.Marks;
@@ -8,11 +9,11 @@ import tictactoe.players.Player;
 import tictactoe.players.RandomPlayer;
 
 public class PlayerFactory {
-    private Move move;
+    private PlayerMove move;
     private Board board;
     private Player[] players = new Player[2];
 
-    public PlayerFactory(Move move, Board board) {
+    public PlayerFactory(PlayerMove move, Board board) {
         this.move = move;
         this.board = board;
     }
@@ -34,13 +35,13 @@ public class PlayerFactory {
     }
 
     private Player[] createHumanVsHuman() {
-        players[0] = new DesktopPlayer(move, Marks.CROSS);
-        players[1] = new DesktopPlayer(move, Marks.NOUGHT);
+        players[0] = new JavaFxPlayer(move, Marks.CROSS);
+        players[1] = new JavaFxPlayer(move, Marks.NOUGHT);
         return players;
     }
 
     private Player[] createHumanVsComputer() {
-        players[0] = new DesktopPlayer(move, Marks.CROSS);
+        players[0] = new JavaFxPlayer(move, Marks.CROSS);
         players[1] = new ComputerPlayer(Marks.NOUGHT, board);
         return players;
     }
@@ -58,7 +59,7 @@ public class PlayerFactory {
     }
 
     private Player[] createRandomVsHuman() {
-        players[0] = new DesktopPlayer(move, Marks.CROSS);
+        players[0] = new JavaFxPlayer(move, Marks.CROSS);
         players[1] = new RandomPlayer(Marks.NOUGHT, board);
         return players;
     }

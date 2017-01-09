@@ -1,13 +1,14 @@
-package fx;
+package fx.scenes;
 
+import fx.PlayerMove;
 import tictactoe.Marks;
 import tictactoe.players.Player;
 
-public class DesktopPlayer implements Player {
-    private Move move;
+public class JavaFxPlayer implements Player {
+    private PlayerMove move;
     private final Marks mark;
 
-    public DesktopPlayer(Move move, Marks mark) {
+    public JavaFxPlayer(PlayerMove move, Marks mark) {
         this.move = move;
         this.mark = mark;
     }

@@ -1,36 +1,33 @@
-package fx;
+package fx.scenes;
 
-import fx.scenes.GameUi;
+import fx.PlayerFactory;
+import fx.PlayerMove;
+import fx.scenes.ui.GameUi;
 import javafx.scene.Scene;
 import tictactoe.Board;
 import tictactoe.GameTypes;
 import tictactoe.Party;
 import tictactoe.players.Player;
 
-public class Game {
+public class GameSceneBuilder {
     private GameUi gameUi;
 
-    public Game(int boardSize, GameTypes gameType) {
-        Move move = new Move();
+    public GameSceneBuilder(int boardSize, GameTypes gameType) {
+        PlayerMove move = new PlayerMove();
         Board board = new Board(boardSize);
         Party party = createParty(move, board, gameType);
-        ClickEvent clickEvent = new ClickEvent(move, party, this);
-        this.gameUi = new GameUi(party, board, clickEvent);
+        this.gameUi = new GameUi(party, board, move);
+        party.play();
     }
 
-    private Party createParty(Move move, Board board, GameTypes gameTypes) {
+    private Party createParty(PlayerMove move, Board board, GameTypes gameTypes) {
         PlayerFactory playerFactory = new PlayerFactory(move, board);
         Player[] players = playerFactory.getPlayers(gameTypes);
         Party party = new Party(board, players[0], players[1]);
-        party.play();
         return party;
     }
 
-    public Scene getGameUi() {
+    public Scene getGameScene() {
         return gameUi.getScene();
-    }
-
-    public void refreshGameUi() {
-        gameUi.refresh();
     }
 }

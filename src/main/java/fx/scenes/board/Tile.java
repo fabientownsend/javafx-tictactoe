@@ -1,12 +1,11 @@
-package fx.shapes;
+package fx.scenes.board;
 
-import fx.ClickEvent;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 
 public class Tile extends Rectangle {
 
-    public Tile(int x, int y, int width, int idTile, ClickEvent clickEvent) {
+    public Tile(int x, int y, int width, int idTile) {
         setWidth(width);
         setHeight(width);
         relocate(x * width, y * width);
@@ -15,8 +14,6 @@ public class Tile extends Rectangle {
 
         setStroke(Color.BLACK);
         setStrokeWidth(5);
-
-        setOnMouseClicked(e -> clickEvent.updateWindow(idTile));
     }
 }
 

@@ -1,6 +1,6 @@
-package fx.shapes;
+package fx.scenes.board;
 
-import fx.ClickEvent;
+import fx.scenes.ClickEvent;
 import javafx.scene.Group;
 import javafx.scene.layout.Pane;
 import tictactoe.Marks;
@@ -24,7 +24,11 @@ public class BoardConverter {
         int idTile = 0;
         for (int y  = 0; y < board.length; y++) {
             for (int x = 0; x < board.length; x++) {
-                Tile tile = new Tile(x, y, TILE_SIZE, idTile, clickEvent);
+                Tile tile = new Tile(x, y, TILE_SIZE, idTile);
+                int finalY = y;
+                int finalX = x;
+                tile.setOnMouseClicked(
+                        e -> clickEvent.updatePartyState(getIdTile(board, finalY, finalX)));
                 idTile++;
                 makeTile(tiles, tile);
 
@@ -36,6 +40,10 @@ public class BoardConverter {
         }
 
         return boardPane;
+    }
+
+    private int getIdTile(Marks[][] board, int finalY, int finalX) {
+        return finalY  * board.length + finalX;
     }
 
     private void makeMark(Marks mark, Group marksGroup, int y, int x) {

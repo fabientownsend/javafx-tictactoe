@@ -1,6 +1,6 @@
 package fx;
 
-public class Move {
+public class PlayerMove {
     private int move = -1;
     private boolean hasChanged;
 

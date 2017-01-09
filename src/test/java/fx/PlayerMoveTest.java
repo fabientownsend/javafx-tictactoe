@@ -5,12 +5,12 @@ import org.junit.Test;
 
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 
-public class MoveTest {
-    private Move move;
+public class PlayerMoveTest {
+    private PlayerMove move;
 
     @Before
     public void initialization() {
-        this.move = new Move();
+        this.move = new PlayerMove();
     }
 
     @Test

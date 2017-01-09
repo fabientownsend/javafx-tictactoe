@@ -1,7 +1,8 @@
-package fx.scenes;
+package fx.scenes.ui;
 
-import fx.ClickEvent;
-import fx.shapes.BoardConverter;
+import fx.PlayerMove;
+import fx.scenes.board.BoardConverter;
+import fx.scenes.ClickEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -18,9 +19,10 @@ public class GameUi {
     private BorderPane boarderPane;
     private BoardConverter boardConverter;
 
-    public GameUi(Party party, Board board, ClickEvent clickEvent) {
+    public GameUi(Party party, Board board, PlayerMove move) {
         this.party = party;
         this.board = board;
+        ClickEvent clickEvent = new ClickEvent(move, party, this);
         this.boardConverter = new BoardConverter(clickEvent);
     }
 

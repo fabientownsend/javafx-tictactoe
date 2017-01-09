@@ -1,4 +1,4 @@
-package fx.shapes;
+package fx.scenes.board;
 
 import javafx.scene.Node;
 import javafx.scene.layout.StackPane;
