@@ -12,6 +12,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import tictactoe.GameTypes;
 
+import java.util.function.Consumer;
+
 public class MenuUi {
     private Stage stage;
 
@@ -40,7 +42,10 @@ public class MenuUi {
         return errorMessage;
     }
 
-    private Button createSubmissionButton(TextField boardSizeInput, Text errorMessage, ComboBox gameTypesList) {
+    private Button createSubmissionButton(
+            TextField boardSizeInput,
+            Text errorMessage,
+            ComboBox gameTypesList) {
         Button submit = new Button("Submit");
         submit.setId("submit");
         submit.setOnMouseClicked(e -> submitSettings(boardSizeInput, errorMessage, gameTypesList));
@@ -73,7 +78,11 @@ public class MenuUi {
         GameSceneBuilder gameSceneBuilder = new GameSceneBuilder(
                 boardSize, getGameTypeSelected(gameTypesComboBox));
 
-        stage.setScene(gameSceneBuilder.getGameScene());
+        displayGameScene(builder -> stage.setScene(builder.getGameScene()), gameSceneBuilder);
+    }
+
+    private void displayGameScene(Consumer<GameSceneBuilder> callback, GameSceneBuilder builder) {
+        callback.accept(builder);
     }
 
     private boolean isValid(String text) {
