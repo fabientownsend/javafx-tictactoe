@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fx.MoveTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2017-01-05T15:28:21" hostname="Fabien-MBP" time="0.065">
+  <properties/>
+  <testcase name="valueIsntChanged_whenAValueWasCalled" classname="fx.MoveTest" time="0.063"/>
+  <testcase name="valueChanged_whenNewValueAdded" classname="fx.MoveTest" time="0.0"/>
+  <testcase name="valueIsntChanged_whenInitialization" classname="fx.MoveTest" time="0.0"/>
+  <testcase name="valueIsntChanged_whendIdenticalToPreviousOne" classname="fx.MoveTest" time="0.0"/>
+  <testcase name="valueChanged_whenNewAValueAddedAfterCalled" classname="fx.MoveTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

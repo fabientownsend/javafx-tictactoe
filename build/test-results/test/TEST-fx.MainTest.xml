@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="fx.MainTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2017-01-05T15:28:01" hostname="Fabien-MBP" time="20.277">
+  <properties/>
+  <testcase name="resetButtonIsInvisibleWhenGameNotOver" classname="fx.MainTest" time="2.603"/>
+  <testcase name="makeCrossWin" classname="fx.MainTest" time="2.632"/>
+  <testcase name="displayTheNextPlayerTurn" classname="fx.MainTest" time="1.147"/>
+  <testcase name="resetButtonIsVisibleWhenGameOver" classname="fx.MainTest" time="2.873"/>
+  <testcase name="initializationOfTheGame" classname="fx.MainTest" time="0.649"/>
+  <testcase name="makeRoundWin" classname="fx.MainTest" time="2.76"/>
+  <testcase name="gameIsReset" classname="fx.MainTest" time="3.199"/>
+  <testcase name="itsATie" classname="fx.MainTest" time="4.412"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

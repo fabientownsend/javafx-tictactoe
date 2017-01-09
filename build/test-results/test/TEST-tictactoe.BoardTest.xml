@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tictactoe.BoardTest" tests="20" skipped="0" failures="0" errors="0" timestamp="2017-01-03T12:20:30" hostname="Fabien-MBP" time="0.015">
+  <properties/>
+  <testcase name="numberOfFreePositionWhenBoardIsFull" classname="tictactoe.BoardTest" time="0.001"/>
+  <testcase name="positionMax3x3Board" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="isNotFreePositionWhenUsed" classname="tictactoe.BoardTest" time="0.001"/>
+  <testcase name="getFreePosition" classname="tictactoe.BoardTest" time="0.008"/>
+  <testcase name="crossPlayerWinColumnOne" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinColumnTwo" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="removeOneElement" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinDiagonnalOne" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinDiagonnalTwo" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="noPlayerWin" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="isNotATieWHenBoardNotFull" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="numberOfFreePositionIsEmpty" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="resetTheBoard" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinRowThree" classname="tictactoe.BoardTest" time="0.001"/>
+  <testcase name="itIsATie" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="isFreePositionWhenEmpty" classname="tictactoe.BoardTest" time="0.001"/>
+  <testcase name="positionMax4x4Board" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinRowOne" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinRowTwo" classname="tictactoe.BoardTest" time="0.0"/>
+  <testcase name="crossPlayerWinColumnThree" classname="tictactoe.BoardTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="JavaCoreTicTacToe">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../JavaCoreTicTacToe/build/libs/JavaCoreTicTacToe.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaFXTicTacToe.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaFXTicTacToe.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaFXTicTacToe_main.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaFXTicTacToe_main.iml" group="JavaFXTicTacToe" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/JavaFXTicTacToe_test.iml" filepath="$PROJECT_DIR$/.idea/modules/JavaFXTicTacToe_test.iml" group="JavaFXTicTacToe" />
+    </modules>
+  </component>
+</project>
