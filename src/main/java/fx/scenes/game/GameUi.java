@@ -1,7 +1,6 @@
-package fx.scenes.ui;
+package fx.scenes.game;
 
 import fx.PlayerMove;
-import fx.scenes.board.BoardConverter;
 import fx.scenes.ClickEvent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;

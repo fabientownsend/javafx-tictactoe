@@ -1,7 +1,7 @@
 package fx.scenes;
 
 import fx.PlayerMove;
-import fx.scenes.ui.GameUi;
+import fx.scenes.game.GameUi;
 import tictactoe.Party;
 
 public class ClickEvent {

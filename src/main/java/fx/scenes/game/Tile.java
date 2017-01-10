@@ -1,4 +1,4 @@
-package fx.scenes.board;
+package fx.scenes.game;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;

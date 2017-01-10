@@ -1,4 +1,4 @@
-package fx.scenes.board;
+package fx.scenes.game;
 
 import fx.scenes.ClickEvent;
 import javafx.scene.Group;

@@ -1,6 +1,6 @@
 package fx;
 
-import fx.scenes.ui.MenuUi;
+import fx.scenes.menu.MenuUi;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -11,8 +11,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        MenuUi menuUi = new MenuUi(stage);
+        // GameUi gameUi = new GameUi(builder -> stage.setScene(builder.getResultScene));
+        MenuUi menuUi = new MenuUi(builder -> stage.setScene(builder.getGameScene()));
         stage.setScene(menuUi.getMenuScene());
         stage.show();
+
     }
 }

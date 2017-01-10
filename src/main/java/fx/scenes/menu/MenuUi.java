@@ -1,4 +1,4 @@
-package fx.scenes.ui;
+package fx.scenes.menu;
 
 import fx.scenes.GameSceneBuilder;
 import javafx.collections.FXCollections;
@@ -76,6 +76,7 @@ public class MenuUi {
     private void displayGameScene(int boardSize, ComboBox gameTypesComboBox) {
         GameSceneBuilder gameSceneBuilder = new GameSceneBuilder(
                 boardSize, getGameTypeSelected(gameTypesComboBox));
+        gameSceneBuilder.play();
 
         callback.accept(gameSceneBuilder);
     }

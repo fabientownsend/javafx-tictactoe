@@ -2,7 +2,7 @@ package fx.scenes;
 
 import fx.PlayerFactory;
 import fx.PlayerMove;
-import fx.scenes.ui.GameUi;
+import fx.scenes.game.GameUi;
 import javafx.scene.Scene;
 import tictactoe.Board;
 import tictactoe.GameTypes;
@@ -11,12 +11,16 @@ import tictactoe.players.Player;
 
 public class GameSceneBuilder {
     private GameUi gameUi;
+    private Party party;
 
     public GameSceneBuilder(int boardSize, GameTypes gameType) {
         PlayerMove move = new PlayerMove();
         Board board = new Board(boardSize);
-        Party party = createParty(move, board, gameType);
+        this.party = createParty(move, board, gameType);
         this.gameUi = new GameUi(party, board, move);
+    }
+
+    public void play() {
         party.play();
     }
 
