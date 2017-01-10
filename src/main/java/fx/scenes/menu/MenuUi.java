@@ -9,16 +9,15 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
-import javafx.stage.Stage;
 import tictactoe.GameTypes;
 
 import java.util.function.Consumer;
 
 public class MenuUi {
-    private Stage stage;
+    private Consumer<GameSceneBuilder> callback;
 
-    public MenuUi(Stage stage) {
-        this.stage = stage;
+    public MenuUi(Consumer<GameSceneBuilder> callback) {
+        this.callback = callback;
     }
 
     public Scene getMenuScene() {
@@ -78,11 +77,7 @@ public class MenuUi {
         GameSceneBuilder gameSceneBuilder = new GameSceneBuilder(
                 boardSize, getGameTypeSelected(gameTypesComboBox));
 
-        displayGameScene(builder -> stage.setScene(builder.getGameScene()), gameSceneBuilder);
-    }
-
-    private void displayGameScene(Consumer<GameSceneBuilder> callback, GameSceneBuilder builder) {
-        callback.accept(builder);
+        callback.accept(gameSceneBuilder);
     }
 
     private boolean isValid(String text) {
