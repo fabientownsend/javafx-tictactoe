@@ -21,7 +21,7 @@ public class GameUi {
     public GameUi(Party party, Board board, PlayerMove move) {
         this.party = party;
         this.board = board;
-        ClickEvent clickEvent = new ClickEvent(move, party, this);
+        ClickEvent clickEvent = new ClickEvent(move, this, party);
         this.boardConverter = new BoardConverter(clickEvent);
     }
 

@@ -6,13 +6,13 @@ import tictactoe.Party;
 
 public class ClickEvent {
     private PlayerMove move;
-    private Party party;
     private GameUi gameUi;
+    private Party party;
 
-    public ClickEvent(PlayerMove move, Party party, GameUi gameUi) {
+    public ClickEvent(PlayerMove move, GameUi gameUi, Party party) {
         this.move = move;
-        this.party = party;
         this.gameUi = gameUi;
+        this.party = party;
     }
 
     public void updatePartyState(int idTile) {

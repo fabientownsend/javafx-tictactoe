@@ -1,6 +1,7 @@
 package fx;
 
 import fx.scenes.menu.MenuUi;
+import javafx.animation.AnimationTimer;
 import javafx.application.Application;
 import javafx.stage.Stage;
 
@@ -11,10 +12,19 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
+        PartyAdapter partyAdapter = new PartyAdapter();
         // GameUi gameUi = new GameUi(builder -> stage.setScene(builder.getResultScene));
         MenuUi menuUi = new MenuUi(builder -> stage.setScene(builder.getGameScene()));
+        menuUi.setPartyAdapter(partyAdapter);
         stage.setScene(menuUi.getMenuScene());
+
         stage.show();
 
+        new AnimationTimer() {
+            @Override
+            public void handle(long now) {
+                partyAdapter.play();
+            }
+        }.start();
     }
 }

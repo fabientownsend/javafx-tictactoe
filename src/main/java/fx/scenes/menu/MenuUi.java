@@ -1,5 +1,6 @@
 package fx.scenes.menu;
 
+import fx.PartyAdapter;
 import fx.scenes.GameSceneBuilder;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,6 +16,7 @@ import java.util.function.Consumer;
 
 public class MenuUi {
     private Consumer<GameSceneBuilder> callback;
+    private PartyAdapter partyAdapter;
 
     public MenuUi(Consumer<GameSceneBuilder> callback) {
         this.callback = callback;
@@ -73,10 +75,10 @@ public class MenuUi {
         }
     }
 
+    private GameSceneBuilder gameSceneBuilder;
     private void displayGameScene(int boardSize, ComboBox gameTypesComboBox) {
-        GameSceneBuilder gameSceneBuilder = new GameSceneBuilder(
-                boardSize, getGameTypeSelected(gameTypesComboBox));
-        gameSceneBuilder.play();
+        this.gameSceneBuilder = new GameSceneBuilder(
+                boardSize, getGameTypeSelected(gameTypesComboBox), partyAdapter);
 
         callback.accept(gameSceneBuilder);
     }
@@ -103,5 +105,9 @@ public class MenuUi {
         }
 
         return game;
+    }
+
+    public void setPartyAdapter(PartyAdapter partyAdapter) {
+        this.partyAdapter = partyAdapter;
     }
 }
