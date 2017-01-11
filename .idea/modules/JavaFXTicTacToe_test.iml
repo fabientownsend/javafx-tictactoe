@@ -10,15 +10,7 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="JavaFXTicTacToe_main" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar://$MODULE_DIR$/../../../JavaCoreTicTacToe/build/libs/JavaCoreTicTacToe.jar!/" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="Gradle: fr.townsend.tictactoe:JavaCoreTicTacToe:1.0" level="project" />
     <orderEntry type="library" name="Gradle: junit:junit:4.11" level="project" />
     <orderEntry type="library" name="Gradle: org.assertj:assertj-core:3.6.1" level="project" />
     <orderEntry type="library" name="Gradle: org.testfx:testfx-core:4.0.5-alpha" level="project" />
