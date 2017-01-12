@@ -18,6 +18,6 @@ public class ClickEvent {
     public void updatePartyState(int idTile) {
         move.setNewMove(idTile);
         party.play();
-        gameUi.refresh();
+        gameUi.update();
     }
 }

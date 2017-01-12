@@ -2,7 +2,7 @@ package fx;
 
 public class PlayerMove {
     private int move = -1;
-    private boolean hasChanged;
+    private boolean hasChanged = false;
 
     public int getLastMove() {
         hasChanged = false;

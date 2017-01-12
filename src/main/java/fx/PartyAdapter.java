@@ -9,11 +9,9 @@ public class PartyAdapter {
     private GameUi gameUi;
 
     public void play() {
-        if (isStarted) {
+        if (isStarted && party.isCurrentPlayerReady()) {
             party.play();
-            if (party.isCurrentPlayerReady()) {
-                gameUi.refresh();
-            }
+            gameUi.update();
         }
     }
 

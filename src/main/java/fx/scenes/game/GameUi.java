@@ -26,23 +26,31 @@ public class GameUi {
     }
 
     public Scene getScene() {
-        reset = new Button("Replay");
-        reset.setId("reset");
-        reset.setOnMouseClicked(e -> resetParty());
+        createResetButton();
+        createTextDisplayer();
+        this.boarderPane = new BorderPane();
+        update();
+        return new Scene(boarderPane);
+    }
+
+    private void createTextDisplayer() {
         label = new Label();
         label.setText("Welcome to Tic-Tac-Toe");
         label.setId("my_label");
-        this.boarderPane = new BorderPane();
-        refresh();
-        return new Scene(boarderPane);
+    }
+
+    private void createResetButton() {
+        reset = new Button("Replay");
+        reset.setId("reset");
+        reset.setOnMouseClicked(e -> resetParty());
     }
 
     private void resetParty() {
         party.reset();
-        refresh();
+        update();
     }
 
-    public void refresh() {
+    public void update() {
         boarderPane.setTop(updateMessage());
         boarderPane.setCenter(convertBoard());
         boarderPane.setBottom(resetButton());

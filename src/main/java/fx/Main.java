@@ -13,7 +13,6 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) {
         PartyAdapter partyAdapter = new PartyAdapter();
-        // GameUi gameUi = new GameUi(builder -> stage.setScene(builder.getResultScene));
         MenuUi menuUi = new MenuUi(builder -> stage.setScene(builder.getGameScene()));
         menuUi.setPartyAdapter(partyAdapter);
         stage.setScene(menuUi.getMenuScene());

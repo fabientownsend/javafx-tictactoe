@@ -17,6 +17,7 @@ public class MarkFactory extends StackPane {
         this.setHeight(tileSize);
         this.tileSize = tileSize;
         relocate(x * tileSize, y * tileSize);
+
         if (mark == Marks.CROSS) {
             getChildren().addAll(makeCross());
         } else {
